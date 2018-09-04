@@ -1,14 +1,22 @@
 import ciudades.*
 import roque.*
-
+import comidas.*
 object pepita {
 
 	var property energia = 100
 	var property ciudad = buenosAires
 	var property posicion = game.at(3, 3)
-
-	method imagen() = "pepita.png"
-
+	
+	method imagen(){
+		if (energia < 10){
+			return "pepita.png"
+		}
+		if (energia > 100){
+			return "pepita2.png"
+		}else{
+			return "pepita1.png"
+		}
+	}
 	method come(comida) {
 		energia = energia + comida.energia()
 	}
