@@ -1,22 +1,24 @@
 import ciudades.*
 import roque.*
 import comidas.*
+
 object pepita {
 
 	var property energia = 100
 	var property ciudad = buenosAires
 	var property posicion = game.at(3, 3)
-	
-	method imagen(){
-		if (energia < 10){
+
+	method imagen() {
+		if (energia < 10) {
 			return "pepita.png"
 		}
-		if (energia > 100){
+		if (energia > 100) {
 			return "pepita2.png"
-		}else{
+		} else {
 			return "pepita1.png"
 		}
 	}
+
 	method come(comida) {
 		energia = energia + comida.energia()
 	}
@@ -41,8 +43,11 @@ object pepita {
 		}
 	}
 
+	// TODO Acá no estás usando alguien, ahora anda porque roque es el único "alguien"
+	// pero si agregaras otro no te anda mas
 	method teEncontro(alguien) {
 		roque.darComida()
 	}
 
 }
+

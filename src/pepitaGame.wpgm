@@ -22,6 +22,12 @@ program PepitaGame {
 //	TECLADO
 	keyboard.v().onPressDo { pepita.volaHacia(villaGesell) }
 	keyboard.b().onPressDo { pepita.volaHacia(buenosAires) }
+	// TODO ojo que acá comida no es sólo comida, también puede ser una ciudad
+	// anda igual porque el parámetro puede tomar cualquier nombre
+	// pero cuando se cruza roque con una ciudad, se está ejecutando este código
+	// el #teEncontro de ciudad
+	// este es el mensaje polimorfico entre comida y ciudad, son dos objectos diferentes
+	// sin embargo son polimórficos
 	game.whenCollideDo(roque,{ comida => comida.teEncontro(roque)})		
 	
 //	START

@@ -23,6 +23,8 @@ object roque {
 	method darComida() {
 		pepita.come(comida)
 		comida = null
+		// TODO acá estás agregando las cosas cosas, y sólo debería largar
+		// aquello que roque agarró
 		game.addVisualIn(manzana, game.at(5,1))
 		game.addVisualIn(alpiste, game.at(5,5))
 	}
